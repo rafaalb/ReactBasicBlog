@@ -1,6 +1,5 @@
-# react-blog-template
+# react-basic-blog
 ## DEMO
-  * [DEMO](https://deleav.github.io/react-blog-template/)
 
 ## Usage
   * npm i

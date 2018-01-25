@@ -5,16 +5,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import PostApp from './containers/PostApp';
-// import App from './containers/App';
-import rootReducers from './reducers/RootReducers';
+import Routes from './routes';
+import rootReducers from './reducers/root_reducers';
 
-let rootElement = document.getElementById('mountNode');
-let store = createStore( rootReducers, window.devToolsExtension ? window.devToolsExtension() : undefined );
+const rootElement = document.getElementById('app');
+let store = createStore(rootReducers, window.devToolsExtension ? window.devToolsExtension() : undefined); //eslint-disable-line
 
 render(
   <Provider store={store}>
-    <PostApp />
+    <Routes />
   </Provider>,
   rootElement
 );
